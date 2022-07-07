@@ -1,9 +1,7 @@
 0x04. C - More functions, more nested loops
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Resources
-
 Read or watch:
-
     Nested while loops
     C - Functions
     Learning to Program in C (Part 06) (stop at 14:00)
