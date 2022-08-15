@@ -1,35 +1,26 @@
-#include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
-
 /**
- * print_list - function that prints all the elements of a list_t.
- * @h: pointer to the list.
+ * print_list - print struct linked
+ * @h: struct
  *
- * if str is NULL print [0] (nil).
- * You are allowed to use printf.
- *
- * Return: the number of nodes.
- * @return size_t
+ * Return: number of nodes
  */
 size_t print_list(const list_t *h)
 {
-	size_t count = 0;
+	size_t number = 0;
 
-	/* while we have a pointer to list */
-	while (h != NULL)
+	if (h != NULL)
 	{
-		/* dereference pointer and check if str is null */
-		if (h->str == NULL)
+		while (h != NULL)
 		{
-			printf("[%d] %s\n", 0, "(nil)");
+			if (h->str != NULL)
+				printf("[%d] %s\n", h->len, h->str);
+			else
+				printf("[%d] %s\n", 0, "(nil)");
+			h = h->next;
+			number++;
 		}
-		else /* if not NULL */
-		{
-			printf("[%d] %s\n", h->len, h->str);
-		}
-		h = h->next;
-		count++;
 	}
-	return (count);
+	return (number);
 }
