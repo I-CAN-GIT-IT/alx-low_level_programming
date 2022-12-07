@@ -1,0 +1,16 @@
+#----- COMPILER C PROGRAMS WITH VARIABLES -----#
+
+## REGION [Variables]
+
+CC=gcc
+SRC=main.c school.c
+
+## END [Variables]
+
+## REGION [Rules]
+
+### Info: General rule.
+all:
+	$(CC) $(SRC) -o school
+
+## END [Rules]
